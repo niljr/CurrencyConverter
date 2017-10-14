@@ -6,10 +6,11 @@ import CurrencyList from '../screens/CurrencyList';
 import Options from '../screens/Options';
 import Themes from '../screens/Themes';
 
-const HomeStack = StackNavigator({
-  Home: {
-    screen: Home,
-    navigationOptions: {
+const HomeStack = StackNavigator(
+  {
+    Home: {
+      screen: Home,
+      navigationOptions: {
         header: () => null,
         headerTitle: 'Home',
       },
@@ -24,11 +25,13 @@ const HomeStack = StackNavigator({
       screen: Themes,
       navigationOptions: {
         headerTitle: 'Themes',
-      }
+      },
     },
-  }, {
+  },
+  {
     headerMode: 'screen',
-});
+  },
+);
 
 const CurrencyListStack = StackNavigator({
   CurrencyList: {
@@ -37,17 +40,20 @@ const CurrencyListStack = StackNavigator({
       headerTitle: navigation.state.params.title,
     }),
   },
-})
-
-export default StackNavigator({
-  Home: {
-    screen: HomeStack,
-  },
-  CurrencyList: {
-    screen: CurrencyListStack,
-  },
-}, {
-  mode: 'modal',
-  cardStyle: { paddingTop: StatusBar.currentHeight },
-  headerMode: 'none',
 });
+
+export default StackNavigator(
+  {
+    Home: {
+      screen: HomeStack,
+    },
+    CurrencyList: {
+      screen: CurrencyListStack,
+    },
+  },
+  {
+    mode: 'modal',
+    headerMode: 'none',
+    cardStyle: { paddingTop: StatusBar.currentHeight },
+  },
+);
