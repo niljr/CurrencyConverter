@@ -8,7 +8,7 @@ import store from './config/store';
 
 EStyleSheets.build({
   $primaryBlue: '#4F6D7A',
-  $primaryOrage: '#D57A66',
+  $primaryOrange: '#D57A66',
   $primaryGreen: '#00BD9D',
   $primaryPurple: '#9E768F',
 
